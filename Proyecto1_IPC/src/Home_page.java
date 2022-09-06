@@ -1,10 +1,16 @@
 
+import javax.swing.JOptionPane;
+import java.awt.Color;
+
 public class Home_page extends javax.swing.JFrame {
 
+    
     
     public Home_page() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.getContentPane().setBackground(new Color(193,179,215));
+        
     }
 
     
@@ -20,15 +26,25 @@ public class Home_page extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Home Page");
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-circundado-usuario-hombre-tipo-de-piel-1-2-80.png"))); // NOI18N
 
+        BTN_ABOUT_.setBackground(new java.awt.Color(181, 225, 174));
+        BTN_ABOUT_.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         BTN_ABOUT_.setText("Nosotros");
+        BTN_ABOUT_.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                BTN_ABOUT_MouseDragged(evt);
+            }
+        });
         BTN_ABOUT_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BTN_ABOUT_ActionPerformed(evt);
             }
         });
 
+        BTN_LOGIN_.setBackground(new java.awt.Color(154, 206, 223));
+        BTN_LOGIN_.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         BTN_LOGIN_.setText("Ingresar");
         BTN_LOGIN_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -36,6 +52,8 @@ public class Home_page extends javax.swing.JFrame {
             }
         });
 
+        BTN_EXIT_.setBackground(new java.awt.Color(253, 202, 162));
+        BTN_EXIT_.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         BTN_EXIT_.setText("Salir");
         BTN_EXIT_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,15 +91,15 @@ public class Home_page extends javax.swing.JFrame {
                     .addComponent(BTN_LOGIN_))
                 .addGap(18, 18, 18)
                 .addComponent(BTN_EXIT_)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BTN_ABOUT_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_ABOUT_ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BTN_ABOUT_ActionPerformed
+    private void BTN_EXIT_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_EXIT_ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_BTN_EXIT_ActionPerformed
 
     private void BTN_LOGIN_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_LOGIN_ActionPerformed
         this.setVisible(false);
@@ -89,9 +107,13 @@ public class Home_page extends javax.swing.JFrame {
         login.setVisible(true);
     }//GEN-LAST:event_BTN_LOGIN_ActionPerformed
 
-    private void BTN_EXIT_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_EXIT_ActionPerformed
-        System.exit(0);
-    }//GEN-LAST:event_BTN_EXIT_ActionPerformed
+    private void BTN_ABOUT_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_ABOUT_ActionPerformed
+        JOptionPane.showMessageDialog(null, "Nombre: Luigi Andersón López Suy \nCarné: 202104727");
+    }//GEN-LAST:event_BTN_ABOUT_ActionPerformed
+
+    private void BTN_ABOUT_MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTN_ABOUT_MouseDragged
+        
+    }//GEN-LAST:event_BTN_ABOUT_MouseDragged
 
     /**
      * @param args the command line arguments

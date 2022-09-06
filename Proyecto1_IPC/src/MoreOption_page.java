@@ -1,9 +1,13 @@
 
+import java.awt.Color;
+
+
 public class MoreOption_page extends javax.swing.JFrame {
 
     public MoreOption_page() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.getContentPane().setBackground(new Color(193,179,215));
     }
 
     @SuppressWarnings("unchecked")
@@ -23,9 +27,11 @@ public class MoreOption_page extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("More options");
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 48)); // NOI18N
         jLabel1.setText("MÁS OPCIONES");
 
+        BTN_CREATEACOUNT_.setBackground(new java.awt.Color(154, 206, 223));
+        BTN_CREATEACOUNT_.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         BTN_CREATEACOUNT_.setText("Crear Cuenta");
         BTN_CREATEACOUNT_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -33,6 +39,8 @@ public class MoreOption_page extends javax.swing.JFrame {
             }
         });
 
+        BTN_INFOCLIENT_.setBackground(new java.awt.Color(154, 206, 223));
+        BTN_INFOCLIENT_.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         BTN_INFOCLIENT_.setText("Informacion del Cliente");
         BTN_INFOCLIENT_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -40,6 +48,8 @@ public class MoreOption_page extends javax.swing.JFrame {
             }
         });
 
+        BTN_DEPOSIT_.setBackground(new java.awt.Color(154, 206, 223));
+        BTN_DEPOSIT_.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         BTN_DEPOSIT_.setText("Realizar Deposito");
         BTN_DEPOSIT_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,6 +57,8 @@ public class MoreOption_page extends javax.swing.JFrame {
             }
         });
 
+        BTN_MAKETRANFERENCE_.setBackground(new java.awt.Color(154, 206, 223));
+        BTN_MAKETRANFERENCE_.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         BTN_MAKETRANFERENCE_.setText("Realizar Transferencia");
         BTN_MAKETRANFERENCE_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -54,6 +66,8 @@ public class MoreOption_page extends javax.swing.JFrame {
             }
         });
 
+        BTN_TRANSACTION_.setBackground(new java.awt.Color(154, 206, 223));
+        BTN_TRANSACTION_.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         BTN_TRANSACTION_.setText("Historial de Transaccion");
         BTN_TRANSACTION_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -61,6 +75,8 @@ public class MoreOption_page extends javax.swing.JFrame {
             }
         });
 
+        BTN_SERVICE_.setBackground(new java.awt.Color(154, 206, 223));
+        BTN_SERVICE_.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         BTN_SERVICE_.setText("Pago de Servicios");
         BTN_SERVICE_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,6 +84,8 @@ public class MoreOption_page extends javax.swing.JFrame {
             }
         });
 
+        BTN_RETURN_.setBackground(new java.awt.Color(251, 182, 209));
+        BTN_RETURN_.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         BTN_RETURN_.setText("Regresar");
         BTN_RETURN_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,6 +93,8 @@ public class MoreOption_page extends javax.swing.JFrame {
             }
         });
 
+        BTN_EXIT_.setBackground(new java.awt.Color(253, 202, 162));
+        BTN_EXIT_.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         BTN_EXIT_.setText("Salir");
         BTN_EXIT_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,14 +123,14 @@ public class MoreOption_page extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(106, 106, 106))
+                .addGap(69, 69, 69))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
+                .addGap(31, 31, 31)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BTN_CREATEACOUNT_)
                     .addComponent(BTN_INFOCLIENT_))

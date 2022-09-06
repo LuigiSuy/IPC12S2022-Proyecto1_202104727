@@ -1,9 +1,14 @@
 
+import java.awt.Color;
+import javax.swing.JOptionPane;
+
+
 public class Login_page extends javax.swing.JFrame {
 
     public Login_page() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.getContentPane().setBackground(new Color(193,179,215));
     }
 
     @SuppressWarnings("unchecked")
@@ -27,16 +32,21 @@ public class Login_page extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
 
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel1.setText("Usuario");
 
+        TXT_USER_.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         TXT_USER_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TXT_USER_ActionPerformed(evt);
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8-circundado-usuario-hombre-tipo-de-piel-1-2-80.png"))); // NOI18N
 
+        BTN_RETURN_.setBackground(new java.awt.Color(251, 182, 209));
+        BTN_RETURN_.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         BTN_RETURN_.setText("Regresar");
         BTN_RETURN_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -44,6 +54,8 @@ public class Login_page extends javax.swing.JFrame {
             }
         });
 
+        BTN_LOGIN_.setBackground(new java.awt.Color(154, 206, 223));
+        BTN_LOGIN_.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         BTN_LOGIN_.setText("Ingresar");
         BTN_LOGIN_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -51,8 +63,10 @@ public class Login_page extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         jLabel2.setText("Contraseña");
 
+        TXT_PASSWORD_.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
         TXT_PASSWORD_.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TXT_PASSWORD_ActionPerformed(evt);
@@ -89,7 +103,7 @@ public class Login_page extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
+                .addContainerGap(31, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1)
@@ -124,45 +138,29 @@ public class Login_page extends javax.swing.JFrame {
     }//GEN-LAST:event_TXT_USER_ActionPerformed
 
     private void BTN_LOGIN_ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_LOGIN_ActionPerformed
+        String usuario = ""; 
+        usuario = TXT_USER_.getText();
+        
+        String contra = new String(TXT_PASSWORD_.getPassword());
+        
+        if (usuario.equals("administrador") && contra.equals("202104727") ){
             this.setVisible(false);
             Register_page registro = new Register_page();
             registro.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(null, "El usuario o la contraseña no coinciden \n ingrese nuevamente los valores correctos", "Alerta", JOptionPane.WARNING_MESSAGE);
+            TXT_USER_.setText(null);
+            TXT_PASSWORD_.setText("");
+        }
+        
+        
+        
     }//GEN-LAST:event_BTN_LOGIN_ActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login_page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login_page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login_page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Login_page.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Login_page().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BTN_LOGIN_;
